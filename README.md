@@ -68,11 +68,11 @@ Content type: `application/hal+json`
 
 ```json
 {
-  "request_uuid": "00000000-0000-0000-0000-000000000012"
+  "request_uuid": "00000000-0000-0000-0000-000000000012",
   "query": "b490ab294b0f0838",
   "from": "2016-09-06T00:00:10Z",
   "to": "2016-09-07T23:59:59Z",
-  "callback_endpoint" : "http://abc.xyz.com/api/v1/request_search"
+  "callback_endpoint" : "http://abc.xyz.com/api/v1/request_search",
   "_links": {
     "self": {
       "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012"
@@ -82,10 +82,99 @@ Content type: `application/hal+json`
 ```
 
 ### 3. Get Request
-TODO
+#### Get Request
+
+##### Operation
+`POST /api/v1/requests{/?request_uuid}`
+
+##### Request Parameter
+    - `request_uuid` : request uuid. 
+
+##### Response
+Returns a HAL document that contains request information
+Content type: `application/hal+json`
+
+##### Response sample
+
+```json
+{
+  "request_uuid": "00000000-0000-0000-0000-000000000012",
+  "query": "b490ab294b0f0838",
+  "from": "2016-09-06T00:00:10Z",
+  "to": "2016-09-07T23:59:59Z",
+  "success": true,
+  "status_message": "Done",
+  "request_time": "2016-09-07T23:59:59Z",
+  "completed_request_time": "2016-09-08T00:01:00Z",
+  "apps": [],
+  "exceptionApps": [],
+  "callback_endpoint" : "http://abc.xyz.com/api/v1/request_search",
+  "_links": {
+    "self": {
+      "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012"
+    },
+    "logs": {
+      "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012"/logs
+    }
+  }
+}
+```
 
 ### 4. Get Logs
-TODO
+#### Get Logs of a request
+
+##### Operation
+`POST /api/v1/requests{/?request_uuid}/logs`
+
+##### Request Parameter
+    - `request_uuid` : request uuid
+
+##### Response
+Returns a json array that lists logs for the request.
+Content type: `application/json`
+
+##### Response sample
+
+```json
+[
+	{ "timestamp": "01", "message": "help" },
+	{ "timestamp": "02", "message": "exception"  }
+]
+```
 
 ## Notification
-TODO
+
+#### After request is done and callback_endpoint is specified, Shimenawa will POST the request information through the specified callback_endpoint
+
+##### Operation
+`POST {callback_endpoint}`
+
+##### Request Body
+Sends a HAL document that contains request information
+Content type: `application/hal+json`
+
+##### Response sample
+
+```json
+{
+  "request_uuid": "00000000-0000-0000-0000-000000000012",
+  "query": "b490ab294b0f0838",
+  "from": "2016-09-06T00:00:10Z",
+  "to": "2016-09-07T23:59:59Z",
+  "success": true,
+  "status_message": "Done",
+  "request_time": "2016-09-07T23:59:59Z",
+  "completed_request_time": "2016-09-08T00:01:00Z",
+  "apps": [],
+  "exceptionApps": [],
+  "callback_endpoint" : "http://abc.xyz.com/api/v1/request_search",
+  "_links": {
+    "self": {
+      "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012"
+    },
+    "logs": {
+      "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012"/logs
+    }
+  }
+}
+```
