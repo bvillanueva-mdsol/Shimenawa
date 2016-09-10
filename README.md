@@ -14,6 +14,7 @@ no parameters
 
 ##### Response
 Returns a root document.
+
 Content type: `application/hal+json`  
 
 ###### Response sample
@@ -48,6 +49,7 @@ Content type: `application/hal+json`
 	- `from` : start date time to analyze. The format should be ISO 8601.
 	- `to` : end date time to analyze. The format should be ISO 8601.
 	- `callback_endpoint`(optional) : POST api endpoint to receive notification if request search is finished.
+
 Content type: `application/json` 
 
 ##### Request Sample
@@ -62,6 +64,7 @@ Content type: `application/json`
 
 ##### Response
 Returns a HAL document that contains the request uuid and request parameters
+
 Content type: `application/hal+json`
 
 ##### Response sample
@@ -92,6 +95,7 @@ Content type: `application/hal+json`
 
 ##### Response
 Returns a HAL document that contains request information
+
 Content type: `application/hal+json`
 
 ##### Response sample
@@ -131,6 +135,7 @@ Content type: `application/hal+json`
 
 ##### Response
 Returns a json array that lists logs for the request.
+
 Content type: `application/json`
 
 ##### Response sample
@@ -151,6 +156,7 @@ Content type: `application/json`
 
 ##### Request Body
 Sends a HAL document that contains request information
+
 Content type: `application/hal+json`
 
 ##### Response sample
