@@ -114,7 +114,7 @@ Content type: `application/hal+json`
       "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012"
     },
     "logs": {
-      "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012/logs""
+      "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012/logs"
     }
   }
 }
@@ -173,7 +173,7 @@ Content type: `application/hal+json`
       "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012"
     },
     "logs": {
-      "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012"/logs
+      "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012/logs"
     }
   }
 }
