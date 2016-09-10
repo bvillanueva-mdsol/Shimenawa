@@ -181,10 +181,6 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 
-packages/
-src/Medidata.Ampridatvir/aspnet_client*
-src/Medidata.Ampridatvir/appsettings.local.config
-src/Medidata.Ampridatvir/connectionStrings.local.config
 .vs/*
 current_git_id.txt
 **/webDeploy/*
