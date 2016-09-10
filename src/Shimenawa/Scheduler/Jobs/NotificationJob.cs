@@ -35,12 +35,12 @@ namespace Medidata.Shimenawa.Scheduler.Jobs
                 Content = new StringContent(
                     _halRequestsBuilder.BuildRequest(request),
                     Encoding.UTF8,
-                    GeneralConstants.JsonContentType)
+                    GeneralConstants.HalJsonContentType)
             };
             
             using (var client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(GeneralConstants.JsonContentType));
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(GeneralConstants.HalJsonContentType));
                 var result = client.SendAsync(httpRequest).Result;
                 result.EnsureSuccessStatusCode();
             }

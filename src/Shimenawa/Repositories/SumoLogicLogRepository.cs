@@ -148,6 +148,8 @@ namespace Medidata.Shimenawa.Repositories
 
         private async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CookieContainer cookieContainer = null)
         {
+            // TODO: apply retry with random sleep time when hitting error 429 instead of doing semaphore style
+            // current implementation will prohibit scaling of servers
             _pool.Wait();
             try
             {
