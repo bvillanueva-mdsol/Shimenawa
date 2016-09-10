@@ -75,7 +75,7 @@ Content type: `application/hal+json`
   "callback_endpoint" : "http://abc.xyz.com/api/v1/request_search",
   "_links": {
     "self": {
-      "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012"
+      "href": "http://localhost:5311/api/v1/requests/00000000-0000-0000-0000-000000000012"
     }
   }
 }
@@ -111,10 +111,10 @@ Content type: `application/hal+json`
   "callback_endpoint" : "http://abc.xyz.com/api/v1/request_search",
   "_links": {
     "self": {
-      "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012"
+      "href": "http://localhost:5311/api/v1/requests/00000000-0000-0000-0000-000000000012"
     },
     "logs": {
-      "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012/logs"
+      "href": "http://localhost:5311/api/v1/requests/00000000-0000-0000-0000-000000000012/logs"
     }
   }
 }
@@ -170,10 +170,10 @@ Content type: `application/hal+json`
   "callback_endpoint" : "http://abc.xyz.com/api/v1/request_search",
   "_links": {
     "self": {
-      "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012"
+      "href": "http://localhost:5311/api/v1/requests/00000000-0000-0000-0000-000000000012"
     },
     "logs": {
-      "href": "http://localhost:5311/api/v1/requests/"00000000-0000-0000-0000-000000000012/logs"
+      "href": "http://localhost:5311/api/v1/requests/00000000-0000-0000-0000-000000000012/logs"
     }
   }
 }
