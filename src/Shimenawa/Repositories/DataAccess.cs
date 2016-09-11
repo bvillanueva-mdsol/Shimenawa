@@ -16,7 +16,8 @@ namespace Medidata.Shimenawa.Repositories
                 var request = context.Requests.SingleOrDefault(r =>
                     r.Query.Equals(query, StringComparison.InvariantCultureIgnoreCase) &&
                     r.From == from &&
-                    r.To == to);
+                    r.To == to &&
+                    r.CallbackEndpoint == callbackEndpoint);
 
                 if (request != null) return request;
 

@@ -16,7 +16,7 @@ namespace Medidata.Shimenawa.Settings
 
         public string SumoAccessKey => ConfigurationManager.AppSettings["SumoAccessKey"];
 
-        public int SumoLogWaitTimeBeforeStartSearch => int.Parse(ConfigurationManager.AppSettings["SumoLogWaitTimeBeforeStartSearch"]);
+        public int SumoLogWaitTimeBeforeStartSearchMs => int.Parse(ConfigurationManager.AppSettings["SumoLogWaitTimeBeforeStartSearchMs"]);
 
         public int SumoLogIntervalWaitTimeBeforeSearchQueryMs => int.Parse(ConfigurationManager.AppSettings["SumoLogIntervalWaitTimeBeforeSearchQueryMs"]);
 

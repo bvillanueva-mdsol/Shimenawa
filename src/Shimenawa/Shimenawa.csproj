@@ -170,6 +170,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Builder\IHalRequestsBuilder.cs" />
     <Compile Include="Builder\HalRequestsBuilder.cs" />
+    <Compile Include="Controllers\Api.V1\RootController.cs" />
     <Compile Include="Controllers\Api.V1\RequestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

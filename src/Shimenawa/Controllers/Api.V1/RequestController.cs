@@ -34,7 +34,7 @@ namespace Medidata.Shimenawa.Controllers.Api.V1
             if (logSearchRequest == null || !logSearchRequest.Validate(out validationMessage))
             {
                 var errorMessageObject = new { message = string.IsNullOrWhiteSpace(validationMessage) ? "Invalid Request Body" : validationMessage };
-                var errorContent = new StringContent(JsonConvert.SerializeObject(errorMessageObject), Encoding.UTF8, GeneralConstants.JsonContentType);
+                var errorContent = new StringContent(JsonConvert.SerializeObject(errorMessageObject), Encoding.UTF8, GeneralConstants.HalJsonContentType);
                 return new HttpResponseMessage(HttpStatusCode.BadRequest) { Content = errorContent };
             }
 
@@ -43,8 +43,7 @@ namespace Medidata.Shimenawa.Controllers.Api.V1
 
             bool created;
             var request = _dataAccess.CreateRequest(logSearchRequest.Query, fromUtc, toUtc, logSearchRequest.CallbackEndpoint, out created);
-            logSearchRequest.RequestUuid = request.RequestUuid;
-            var successContent = new StringContent(JsonConvert.SerializeObject(logSearchRequest), Encoding.UTF8, GeneralConstants.JsonContentType);
+            var successContent = new StringContent(_halRequestsBuilder.BuildLogSearchRequest(request), Encoding.UTF8, GeneralConstants.HalJsonContentType);
 
             if (created)
             {
@@ -63,7 +62,7 @@ namespace Medidata.Shimenawa.Controllers.Api.V1
             if (request == null)
                 return new HttpResponseMessage(HttpStatusCode.NotFound);
             
-            var returnContent = new StringContent(_halRequestsBuilder.BuildRequest(request), Encoding.UTF8, GeneralConstants.JsonContentType);
+            var returnContent = new StringContent(_halRequestsBuilder.BuildRequest(request), Encoding.UTF8, GeneralConstants.HalJsonContentType);
             return new HttpResponseMessage(HttpStatusCode.OK) { Content = returnContent };
         }
 

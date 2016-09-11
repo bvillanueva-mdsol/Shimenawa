@@ -32,7 +32,7 @@ namespace Medidata.Shimenawa.Scheduler
         /// <returns></returns>
         private int CalculateWaitAllowanceTime(DateTime to, DateTime requestAccepted)
         {
-            double timeAllowanceMs = _appSettings.SumoLogWaitTimeBeforeStartSearch;
+            double timeAllowanceMs = _appSettings.SumoLogWaitTimeBeforeStartSearchMs;
             var timeDifferenceMs = (requestAccepted - to).TotalMilliseconds;
 
             var timeDelayMs = timeAllowanceMs;
