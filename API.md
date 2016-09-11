@@ -28,6 +28,8 @@ No request parameters required.
 ##### Response
 Returns a root document.
 
+Response Status: 200
+
 Content type: `application/hal+json`  
 
 ##### Response sample
@@ -79,6 +81,11 @@ Content type: `application/json`
 ##### Response
 Returns a HAL document that contains the request uuid and request parameters.
 
+Response Status: 
+    - 201 (for successful creation of request)
+	- 200 (if same request parameters are found in Shimenawa DB)
+	- 400 (for invalid request body, comes with an error message)
+
 Content type: `application/hal+json`  
 
 ##### Response sample
@@ -109,6 +116,10 @@ Gets full information about a request.
 
 ##### Response
 Returns a HAL document of the request.
+
+Response Status: 
+	- 200 (for successful fetch)
+	- 404 (request not found)
 
 Content type: `application/hal+json`  
 
@@ -149,6 +160,10 @@ Get Logs of a request.
 
 ##### Response
 Returns a json array that lists logs for the request.
+
+Response Status:
+	- 200 (for successful fetch)
+	- 404 (request not found)
 
 Content type: `application/json`  
 
