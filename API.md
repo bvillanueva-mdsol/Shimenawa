@@ -58,6 +58,7 @@ Creates a Sumo Log Search Request
 
 ##### Request
 Request body required
+
     - `query` : sumo logic query string
 	- `from` : start date time to analyze. The format should be ISO 8601.
 	- `to` : end date time to analyze. The format should be ISO 8601.
