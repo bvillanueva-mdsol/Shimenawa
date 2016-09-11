@@ -8,7 +8,7 @@ namespace Medidata.Shimenawa.Settings
         Uri SumoApiUri { get; }
         string SumoAccessId { get; }
         string SumoAccessKey { get; }
-        int SumoLogWaitTimeBeforeStartSearch { get; }
+        int SumoLogWaitTimeBeforeStartSearchMs { get; }
         int SumoLogIntervalWaitTimeBeforeSearchQueryMs { get; }
         int SumoApiRequestRateLimit { get; }
         int HangfireWorkerCount { get; }
