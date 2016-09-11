@@ -2,14 +2,14 @@
 This document will provide endpoints available inside Shimenawa
 
 ## Contents
-- [Authentication](#Authentication)
-- [APIs](#APIs)
-    -  [Root](#Root)
-    -  [Create Request](#Create-Request)
-    -  [Get Request](#Get-Request)
-    -  [Get Logs](#Get-Logs)
-- [Notification](#Notification)
-    -  [Get Notification](#Callback Notification)
+- [Authentication](#qathentication)
+- [APIs](#apis)
+    -  [Root](#root)
+    -  [Create Request](#create-request)
+    -  [Get Request](#get-request)
+    -  [Get Logs](#get-logs)
+- [Notification](#notification)
+    -  [Get Notification](#callback-notification)
 
 ## Authentication
 None (Left blank intentionally for flexibility)
