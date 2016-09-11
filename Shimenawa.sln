@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shimenawa", "src\Shimenawa\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{CF5D5EBE-45AE-4F05-BF3E-18765BB91E7C}"
 	ProjectSection(SolutionItems) = preProject
+		API.md = API.md
 		README.md = README.md
 	EndProjectSection
 EndProject
