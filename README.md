@@ -1,6 +1,6 @@
 # Shimenawa
 Shimenawa is a web application that manages search queries to Sumo Logic to get target logs and deliver to requesters/consumers effectively and efficiently.
-It uses the [Sumo Search Job API](https://help.sumologic.com/APIs/02Search_Job_API/About_the_Search_Job_API) to featch logs from Sumo.
+It uses the [Sumo Search Job API](https://help.sumologic.com/APIs/02Search_Job_API/About_the_Search_Job_API) to fetch logs from Sumo.
 
 ## API
 [API document](API.md)
