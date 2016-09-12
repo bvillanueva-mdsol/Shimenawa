@@ -77,7 +77,7 @@ namespace Medidata.Shimenawa.Controllers.Api.V1
             var logs = _dataAccess.GetLogs(uuid);
             var json = $@"[{string.Join(",", logs)}]";
 
-            return new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(json) };
+            return new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(json, Encoding.UTF8, GeneralConstants.JsonContentType) };
         }
     }
 }
